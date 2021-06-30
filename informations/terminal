@@ -1,1 +1,5 @@
 php artisan make:livewire HomeComponent == livewireda component yaratish
+
+composer require laravel/Jetstream  == Jetstream ni o'rnatish
+
+php artisan jetstream:install livewire
