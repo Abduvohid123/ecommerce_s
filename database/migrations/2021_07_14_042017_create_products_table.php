@@ -25,10 +25,10 @@ class CreateProductsTable extends Migration
             $table->enum('stock_status',['instock','outofstock']);
             $table->boolean('featured')->default(false);
             $table->unsignedInteger('quantity')->default(10);
-            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('caregory_id')->nullable();
             $table->string('image')->nullable();
-            $table->text('images');
-            $table->foreign('category_is')->references('id')->on('categories')->onDelete('cascade');
+            $table->text('images')->nullable();
+            $table->foreign('caregory_id')->references('id')->on('caregories')->onDelete('cascade');
             $table->timestamps();
         });
     }
