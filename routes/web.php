@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
+Route::get('/product/{slug}', \App\Http\Livewire\DetailsComponent::class)->name('product.details');
 Route::get('/', \App\Http\Livewire\HomeComponent::class);
 Route::get('/shop', \App\Http\Livewire\ShopComponent::class);
 Route::get('/cart', \App\Http\Livewire\CartComponent::class);
